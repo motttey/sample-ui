@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -8,15 +8,14 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-size: 100%;
   outline: none;
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: 400;
   color: #333;
   font-size: 16px;
   background-color: #26c6da;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,8 +29,6 @@ label {
   font-weight: normal;
   font-style: normal;
   font-size: 100%;
-  line-height: 1;
-  font-family: inherit;
   vertical-align: baseline;
   vertical-align: middle;
   line-height: normal;
@@ -50,7 +47,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 @keyframes spin {
@@ -78,7 +75,7 @@ input[type="submit"] {
   font-family: "Nunito Sans";
   font-style: italic;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0oMImSLYBIv1o4X1M8cce4E9lKcw.ttf)
+  src: url("https://fonts.gstatic.com/s/nunitosans/v6/pe0oMImSLYBIv1o4X1M8cce4E9lKcw.ttf")
     format("truetype");
 }
 
@@ -86,7 +83,7 @@ input[type="submit"] {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I94.ttf)
+  src: url("https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I94.ttf")
     format("truetype");
 }
 
@@ -94,7 +91,7 @@ input[type="submit"] {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 800;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBc5tU1Q.ttf)
+  src: url("https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBc5tU1Q.ttf")
     format("truetype");
 }
 
@@ -119,7 +116,6 @@ input[type="email"],
 input[type="password"],
 textarea {
   font-size: 14px;
-  line-height: 20px;
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: 400;
   padding: 0.75rem 0;
@@ -144,12 +140,9 @@ textarea {
   visibility: hidden;
 }
 
-.checkbox input[type="checkbox"] + span:before {
+.checkbox input[type="checkbox"] + span::before {
   position: absolute;
-  top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
+  inset: 50% auto auto 50%;
   width: 0.85em;
   height: 0.85em;
   transform: translate3d(-50%, -50%, 0);
@@ -159,19 +152,17 @@ textarea {
   display: block;
 }
 
-.checkbox input[type="checkbox"]:checked + span:before {
+.checkbox input[type="checkbox"]:checked + span::before {
   font-size: 16px;
-  line-height: 24px;
   box-shadow: none;
   color: #2cc5d2;
   margin-top: -1px;
-  font-family: "percolate";
+  font-family: percolate;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   content: "\e65e";
 }
 
@@ -182,7 +173,7 @@ textarea {
 
 .input-symbol.error [class^="icon-"],
 .input-symbol.error [class*=" icon-"] {
-  color: #ff4400;
+  color: #f40;
 }
 
 .input-symbol [class^="icon-"],
@@ -217,7 +208,7 @@ textarea {
 }
 
 @font-face {
-  font-family: "percolate";
+  font-family: percolate;
   src: url("./assets/icon/percolate.eot?-5w3um4");
   src: url("./assets/icon/percolate.eot?#iefix5w3um4")
       format("embedded-opentype"),
@@ -230,8 +221,7 @@ textarea {
 
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: "percolate";
-
+  font-family: percolate;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -239,15 +229,15 @@ textarea {
   line-height: 1;
 }
 
-.icon-star:before {
+.icon-star::before {
   content: "\e608";
 }
 
-.icon-face-sad:before {
+.icon-face-sad::before {
   content: "\e60f";
 }
 
-.icon-check:before {
+.icon-check::before {
   content: "\e65e";
 }
 
@@ -314,6 +304,7 @@ textarea {
 .pin-button:hover {
   color: #2cc5d2;
 }
+
 .pin-button:focus {
   outline-color: transparent;
 }
@@ -394,10 +385,7 @@ textarea {
 
 .wrapper-message {
   position: absolute;
-  top: 45%;
-  right: 0;
-  bottom: auto;
-  left: 0;
+  inset: 45% 0 auto;
   width: auto;
   height: auto;
   transform: translate3d(0, -50%, 0);
@@ -437,7 +425,7 @@ textarea {
   text-align: center;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (width >= 40em) {
   .page.lists-show nav {
     text-align: left;
   }
