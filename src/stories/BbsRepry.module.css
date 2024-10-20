@@ -1,0 +1,79 @@
+.replyContainer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 700px;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.replyNumber {
+    font-weight: bold;
+    color: #000;
+    }
+
+.userInfo {
+    color: #007bff;
+}
+
+.timestamp {
+    color: #555;
+}
+
+.board {
+    color: #555;
+}
+
+.content {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.reference {
+    margin-bottom: 5px;
+}
+
+.referenceNumber {
+    background-color: #f5f5f5;
+    padding: 3px 5px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    color: #333;
+}
+
+.footer {
+    text-align: right;
+    font-size: 12px;
+    color: #555;
+}
+
+.userID {
+    color: #555;
+}
+
+.threadTitle {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    text-align: left;
+}
+  
+.threadTitle h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
