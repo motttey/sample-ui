@@ -1,13 +1,24 @@
 import React, { useState } from 'react';
 import styles from "./Chat.module.css";
 
-interface MessageType {
-    text: string,
-    sender: string
+interface Props {
+  messageList: Array<MessageType>,
+  senderImgUrl?: string,
+  receiverImgUrl?: string
 }
 
-const Chat = () => {
-  const [messages, setMessages] = useState<Array<MessageType>>([]);
+interface MessageType {
+  text: string;
+  sender: string;
+  hasImage: boolean;
+}
+
+const Chat = ({
+  messageList,
+  senderImgUrl = "https://motttey.github.io/doraemon-namecard.webp",
+  receiverImgUrl = "https://motttey.github.io/doraemon-namecard.webp",
+}: Props) => {
+  const [messages, setMessages] = useState<Array<MessageType>>(messageList);
   const [input, setInput] = useState<string>('');
 
   const handleSendMessage = () => {
@@ -15,15 +26,17 @@ const Chat = () => {
       const newMessage = {
         text: input,
         sender: 'user',
+        hasImage: true
       };
       setMessages([...messages, newMessage]);
       setInput('');
 
-      // 仮のボットレスポンス
+      // Simulate bot response
       setTimeout(() => {
         const botMessage = {
           text: 'これは自動応答です。',
           sender: 'bot',
+          hasImage: true
         };
         setMessages((prevMessages) => [...prevMessages, botMessage]);
       }, 1000);
@@ -42,15 +55,35 @@ const Chat = () => {
               message.sender === 'user' ? styles.messageUser : styles.messageBot
             }`}
           >
+            {message.sender === 'user' && (
+              <div className={styles.avatar}>
+                {message.hasImage && (
+                  <img
+                    src={receiverImgUrl}
+                    alt="avatar"
+                    className={`${styles.avatarImage} ${styles.imageSender}`}
+                  />
+                )}
+              </div>
+            )}
             <div
               className={`${styles.message} ${
-                message.sender === 'user'
-                  ? styles.userMessage
-                  : styles.botMessage
+                message.sender === 'user' ? styles.userMessage : styles.botMessage
               }`}
             >
               {message.text}
             </div>
+            {message.sender !== 'user' && (
+              <div className={styles.avatar}>
+                {message.hasImage && (
+                  <img
+                    src={senderImgUrl}
+                    alt="avatar"
+                    className={`${styles.avatarImage} ${styles.imageReceiver}`}
+                  />
+                )}
+              </div>
+            )}
           </div>
         ))}
       </div>
