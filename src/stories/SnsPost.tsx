@@ -1,28 +1,51 @@
 import React from 'react';
 import styles from './SnsPost.module.css';
 
-const SnsPost = () => {
+interface Props {
+    username: string,
+    userHandle: string,
+    postStrList: Array<string>,
+    timeStampStr: string
+    impsStr: string,
+    imageSrcUrl?: string
+}
+
+const SnsPost = ({
+    username,
+    userHandle,
+    timeStampStr,
+    postStrList,
+    impsStr,
+    imageSrcUrl = "https://motttey.github.io/doraemon-namecard.webp"
+}: Props) => {
   return (
     <div className={styles.postContainer}>
       <div className={styles.header}>
         <img 
-          src="https://motttey.github.io/doraemon-namecard.webp" 
+          src={imageSrcUrl} 
           alt="Profile" 
           className={styles.profileImage} 
         />
         <div className={styles.userInfo}>
-          <span className={styles.username}>望月田吾作</span>
-          <span className={styles.userHandle}>@mt_tg</span>
+          <span className={styles.username}>{username}</span>
+          <span className={styles.userHandle}>{userHandle}</span>
         </div>
       </div>
 
       <div className={styles.content}>
-        <p>テストテキスト</p>
+        <p>
+            {postStrList.map((line, index) => (
+                <span key={index}>
+                    {line}
+                    <br />
+                </span>
+            ))}
+        </p>
       </div>
 
       <div className={styles.footer}>
-        <span>午後4:32 ・ 2024年10月19日 ・ </span>
-        <span className={styles.views}>493 件の表示</span>
+        <span>{timeStampStr}</span>
+        <span className={styles.views}>{impsStr}</span>
       </div>
     
     {/*

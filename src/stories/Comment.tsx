@@ -1,24 +1,41 @@
 import React from 'react';
 import styles from './Comment.module.css';
 
-const Comment = () => {
+interface Props {
+    userId: string,
+    timeStampStr: string
+    imageSrcUrl?: string
+    commentStrList: Array<string>
+}
+
+const Comment = ({
+    userId,
+    timeStampStr,
+    commentStrList,
+    imageSrcUrl = "https://motttey.github.io/doraemon-namecard.webp"
+}: Props) => {
   return (
     <div className={styles.commentContainer}>
       <div className={styles.header}>
         <img 
-          src="https://motttey.github.io/doraemon-namecard.webp" 
+          src={imageSrcUrl}
           alt="User avatar" 
           className={styles.avatar}
         />
         <div className={styles.userInfo}>
-          <span className={styles.username}>user*******</span>
-          <span className={styles.timestamp}>16分前</span>
+          <span className={styles.username}>{userId}</span>
+          <span className={styles.timestamp}>{timeStampStr}</span>
         </div>
       </div>
 
       <div className={styles.content}>
         <p>
-          テストコメントテストコメント
+            {commentStrList.map((line, index) => (
+                <span key={index}>
+                    {line}
+                    <br />
+                </span>
+            ))}
         </p>
       </div>
 

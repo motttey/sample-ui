@@ -1,4 +1,3 @@
-import { fn } from '@storybook/test';
 import SnsPost from './SnsPost';
 import { Meta } from '@storybook/react';
 
@@ -12,20 +11,21 @@ const meta: Meta<typeof SnsPost> = {
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
 };
 
 export default meta;
 
+const defaultArgs = {
+  username: '望月*******',
+  userHandle: '@mt_tg',
+  timeStampStr: '午後4:32 ・ 2024年10月19日',
+  impsStr: '999 件の表示',
+  postStrList: ['テストコメント', 'テストテストテストコメント'],
+}
+
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default = {
   args: {
-    primary: true,
-    label: 'SNSPost',
+    ...defaultArgs
   },
 };
