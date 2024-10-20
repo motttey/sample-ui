@@ -8,6 +8,7 @@ export default [
     ignores: ["node_modules"],
   },
   {
+    files: ["**/*.jsx", "**/*.tsx"],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",

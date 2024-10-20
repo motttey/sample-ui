@@ -26,6 +26,6 @@ export default meta;
 export const Default = {
   args: {
     primary: true,
-    label: 'Button',
+    label: 'Chat',
   },
 };
