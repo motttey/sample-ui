@@ -1,0 +1,71 @@
+.postContainer {
+    background-color: #fff; /* Black background */
+    color: #000; /* White text */
+    padding: 16px;
+    border-radius: 10px;
+    width: 500px;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #888;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .profileImage {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .userInfo {
+    margin-left: 12px;
+  }
+  
+  .username {
+    font-weight: bold;
+    display: block;
+    font-size: 16px;
+  }
+  
+  .userHandle {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .content {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .footer {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .views {
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .iconButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .iconButton:hover {
+    color: #1da1f2; /* Twitter blue */
+  }
+  
