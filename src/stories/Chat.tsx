@@ -55,13 +55,13 @@ const Chat = ({
               message.sender === 'user' ? styles.messageUser : styles.messageBot
             }`}
           >
-            {message.sender === 'user' && (
+            {message.sender !== 'user' && (
               <div className={styles.avatar}>
                 {message.hasImage && (
                   <img
-                    src={receiverImgUrl}
+                    src={senderImgUrl}
                     alt="avatar"
-                    className={`${styles.avatarImage} ${styles.imageSender}`}
+                    className={`${styles.avatarImage} ${styles.imageReceiver}`}
                   />
                 )}
               </div>
@@ -73,13 +73,13 @@ const Chat = ({
             >
               {message.text}
             </div>
-            {message.sender !== 'user' && (
+            {message.sender === 'user' && (
               <div className={styles.avatar}>
                 {message.hasImage && (
                   <img
-                    src={senderImgUrl}
+                    src={receiverImgUrl}
                     alt="avatar"
-                    className={`${styles.avatarImage} ${styles.imageReceiver}`}
+                    className={`${styles.avatarImage} ${styles.imageSender}`}
                   />
                 )}
               </div>
