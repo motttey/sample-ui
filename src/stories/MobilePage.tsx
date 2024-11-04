@@ -6,30 +6,48 @@ interface Props {
     visited: number
 }
 
+const VisitorCounter = (visited: number) => {
+    // `visited`が「1234」のような数値と仮定し、文字列に変換して1文字ずつ分割
+    const countChars = visited.toString().split('');
+  
+    return (
+      <p className={styles.visitorCount}>
+        貴方は
+        {countChars.map((char, index) => (
+          <span key={index} className={styles.counterChar}>
+            {char}
+          </span>
+        ))}
+        人目の被験者......
+      </p>
+    );
+};
+
 const MobilePage = ({visited}: Props) => {
     return (
         <div className={styles.container}>
             <header>
-            <img
-                src="https://pbs.twimg.com/media/GYpujm4bUAAXyFq?format=jpg&name=large"
-                alt="ヘッダーイメージ"
-                className={styles.headerImage}
-            />
+                <p>††望月田吾作の闇のあとがき††</p>
+                <img
+                    src="https://pbs.twimg.com/media/GYpujm4bUAAXyFq?format=jpg&name=large"
+                    alt="ヘッダーイメージ"
+                    className={styles.headerImage}
+                />
             </header>
 
             <main>
-            <p className={styles.apologyMessage}>
-                更新が滞ってしまい申し訳ありませんでした。・゜・(ノД`)
+            <p className={styles.message}>
+                ★★★ 望月田吾作 おすすめイタリアン'24 ★★★
             </p>
             <p className={styles.updateInfo}>hogehoge</p>
             </main>
 
             <nav>
-            <a href="#">1st</a> | <a href="#">main</a> | <a href="#">BBS</a>
+                <a href="#">自己紹介</a> | <a href="#">イラスト</a> | <a href="#">掲示板</a> | <a href="#">絵茶</a>
             </nav>
 
             <footer>
-            <p className={styles.visitorCount}>貴方は{visited}人目の被験者......</p>
+                {VisitorCounter(visited)}
             </footer>
         </div>
     );

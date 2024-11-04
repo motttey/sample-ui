@@ -9,6 +9,7 @@
   
   .container {
     padding: 20px;
+    height: 700px;
   }
   
   .headerImage {
@@ -17,7 +18,7 @@
     height: auto;
   }
   
-  .apologyMessage {
+  .message {
     color: red;
     font-size: 16px;
     margin-bottom: 10px;
@@ -33,7 +34,7 @@
   }
   
   nav a {
-    color: white;
+    color: black;
     text-decoration: none;
     margin: 0 10px;
   }
@@ -41,8 +42,23 @@
   nav a:hover {
     text-decoration: underline;
   }
-  
+
   .visitorCount {
-    color: red;
     font-size: 12px;
+    color: #333;
+  }
+  
+  .counterChar {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.5em;
+    margin: 0 0.1em;
+    background-color: #000;
+    color: red;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5em;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
   }
