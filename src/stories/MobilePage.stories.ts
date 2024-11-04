@@ -21,7 +21,7 @@ export default meta;
 type Story = StoryObj<typeof MobilePage>;
 
 const defaultArgs = {
-  visited: 1000
+  visited: 211293
 }
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args

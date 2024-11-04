@@ -7,11 +7,25 @@
     margin: 0;
   }
   
+  ul, li {
+    list-style-type: none;
+  }
+  li {
+    padding-left: -2em;
+    text-indent: -2em;
+  }
+
+
   .container {
     padding: 20px;
     height: 700px;
   }
-  
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
   .headerImage {
     width: 100%;
     max-width: 300px;

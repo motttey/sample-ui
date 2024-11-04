@@ -27,19 +27,34 @@ const MobilePage = ({visited}: Props) => {
     return (
         <div className={styles.container}>
             <header>
-                <p>††望月田吾作の闇のあとがき††</p>
+                <p className={styles.title}>††望月田吾作の闇のあとがき††</p>
                 <img
                     src="https://pbs.twimg.com/media/GYpujm4bUAAXyFq?format=jpg&name=large"
                     alt="ヘッダーイメージ"
                     className={styles.headerImage}
                 />
             </header>
+            {VisitorCounter(visited)}
 
             <main>
             <p className={styles.message}>
-                ★★★ 望月田吾作 おすすめイタリアン'24 ★★★
+                ★★★ おすすめカレー'24 ★★★
             </p>
-            <p className={styles.updateInfo}>hogehoge</p>
+            <ul>
+                <li>☆LAND☆ (目黒)</li>
+                <li>☆バルピパル☆ (西小山)</li>
+                <li>☆ナンディニ☆ (虎ノ門)</li>
+                <li>☆ボンディ☆ (神保町)</li>
+                <li>☆ニルワナム☆ (神谷町)</li>
+                <li>☆スパイスカレー食堂☆ (五反田)</li>
+                <li>☆欧風カレー工房 すぷーん☆ (国分寺)</li>
+                <li>☆東印度カレー商会☆ (不動前)</li>
+                <li>☆ボタニカリー☆ (大阪本町)</li>
+                <li>☆ナイアガラ☆ (祐天寺)</li>
+            </ul>
+            <p className={styles.updateInfo}>
+                更新日: 2024.12.30
+            </p>
             </main>
 
             <nav>
@@ -47,7 +62,8 @@ const MobilePage = ({visited}: Props) => {
             </nav>
 
             <footer>
-                {VisitorCounter(visited)}
+                <p><a>魔法のdランド</a></p>
+                <p>(C)望月田吾作 ※無断転載禁止</p>
             </footer>
         </div>
     );
