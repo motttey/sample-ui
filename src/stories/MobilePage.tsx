@@ -27,14 +27,17 @@ const MobilePage = ({visited}: Props) => {
     return (
         <div className={styles.container}>
             <header>
-                <p className={styles.title}>††望月田吾作の闇のあとがき††</p>
+                <p className={styles.title}>††望月田吾作 闇のあとがき††</p>
                 <img
                     src="https://pbs.twimg.com/media/GYpujm4bUAAXyFq?format=jpg&name=large"
                     alt="ヘッダーイメージ"
                     className={styles.headerImage}
                 />
             </header>
-            {VisitorCounter(visited)}
+            
+            <div className={styles.counterContainer}>
+                {VisitorCounter(visited)}
+            </div>
 
             <main>
             <p className={styles.message}>
@@ -47,7 +50,7 @@ const MobilePage = ({visited}: Props) => {
                 <li>☆ボンディ☆ (神保町)</li>
                 <li>☆ニルワナム☆ (神谷町)</li>
                 <li>☆スパイスカレー食堂☆ (五反田)</li>
-                <li>☆欧風カレー工房 すぷーん☆ (国分寺)</li>
+                <li>☆AHIRIYA☆ (代々木)</li>
                 <li>☆東印度カレー商会☆ (不動前)</li>
                 <li>☆ボタニカリー☆ (大阪本町)</li>
                 <li>☆ナイアガラ☆ (祐天寺)</li>
