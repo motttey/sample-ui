@@ -6,6 +6,36 @@ interface Props {
     visited: number
 }
 
+interface Restaurant {
+    name: string
+    location: string
+}
+
+const restaurants = [
+    { name: "LAND", location: "目黒" },
+    { name: "バルピパル", location: "西小山" },
+    { name: "ナンディニ", location: "虎ノ門" },
+    { name: "ボンディ", location: "神保町" },
+    { name: "ニルワナム", location: "神谷町" },
+    { name: "スパイスカレー食堂", location: "五反田" },
+    { name: "AHIRIYA", location: "代々木" },
+    { name: "東印度カレー商会", location: "不動前" },
+    { name: "ボタニカリー", location: "大阪本町" },
+    { name: "ナイアガラ", location: "祐天寺" }
+];
+
+const RestaurantList = (restaurants: Array<Restaurant>) => {
+    return (
+        <ul>
+            {restaurants.map((restaurant, index) => (
+                <li key={index}>
+                    ☆{restaurant.name}☆ ({restaurant.location})
+                </li>
+            ))}
+        </ul>
+    );
+}
+
 const VisitorCounter = (visited: number) => {
     // `visited`が「1234」のような数値と仮定し、文字列に変換して1文字ずつ分割
     const countChars = visited.toString().split('');
@@ -43,18 +73,7 @@ const MobilePage = ({visited}: Props) => {
             <p className={styles.message}>
                 ★★★ おすすめカレー'24 ★★★
             </p>
-            <ul>
-                <li>☆LAND☆ (目黒)</li>
-                <li>☆バルピパル☆ (西小山)</li>
-                <li>☆ナンディニ☆ (虎ノ門)</li>
-                <li>☆ボンディ☆ (神保町)</li>
-                <li>☆ニルワナム☆ (神谷町)</li>
-                <li>☆スパイスカレー食堂☆ (五反田)</li>
-                <li>☆AHIRIYA☆ (代々木)</li>
-                <li>☆東印度カレー商会☆ (不動前)</li>
-                <li>☆ボタニカリー☆ (大阪本町)</li>
-                <li>☆ナイアガラ☆ (祐天寺)</li>
-            </ul>
+            {RestaurantList(restaurants)}
             <p className={styles.updateInfo}>
                 更新日: 2024.12.30
             </p>
