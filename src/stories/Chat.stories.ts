@@ -17,6 +17,7 @@ const meta: Meta<typeof Chat> = {
 export default meta;
 
 const defaultArgs = {
+  title: 'Chat',
   messageList: [
     {
       text: 'こんにちは',

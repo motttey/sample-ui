@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from "./Chat.module.css";
 
 interface Props {
+  title: string,
   messageList: Array<MessageType>,
   senderImgUrl?: string,
   receiverImgUrl?: string
@@ -14,6 +15,7 @@ interface MessageType {
 }
 
 const Chat = ({
+  title,
   messageList,
   senderImgUrl = "https://motttey.github.io/doraemon-namecard.webp",
   receiverImgUrl = "https://motttey.github.io/doraemon-namecard.webp",
@@ -45,7 +47,7 @@ const Chat = ({
 
   return (
     <div className={styles.container}>
-      <div className={styles.chatHeader}>LINE風チャット</div>
+      <div className={styles.chatHeader}>{title}</div>
 
       <div className={styles.chatBody}>
         {messages.map((message, index) => (

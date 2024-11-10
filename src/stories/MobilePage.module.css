@@ -1,20 +1,19 @@
 
-  body {
+  .container {
     font-family: Arial, sans-serif;
-    background-color: black;
     color: red;
     text-align: center;
     margin: 0;
   }
   
-  ul, li {
+  .container ul, .container li {
     list-style-type: none;
   }
-  li {
+
+  .container li {
     padding-left: -2em;
     text-indent: -2em;
   }
-
 
   .container {
     padding: 20px;
