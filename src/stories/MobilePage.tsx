@@ -57,9 +57,9 @@ const MobilePage = ({visited}: Props) => {
     return (
         <div className={styles.container}>
             <header>
-                <p className={styles.title}>††望月田吾作 闇のあとがき††</p>
+                <p className={styles.title}>††望月田吾作 あとがき††</p>
                 <img
-                    src="https://pbs.twimg.com/media/GYpujm4bUAAXyFq?format=jpg&name=large"
+                    src="/public/okutuke.png"
                     alt="ヘッダーイメージ"
                     className={styles.headerImage}
                 />

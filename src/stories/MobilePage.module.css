@@ -39,6 +39,7 @@
     width: 100%;
     max-width: 300px;
     height: auto;
+    border: gray 1.5px solid;
   }
   
   .message {
