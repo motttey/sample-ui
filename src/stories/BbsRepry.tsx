@@ -36,7 +36,6 @@ const BbsReply = ({
           {userName})
         </span>
         <span className={styles.timestamp}>{timeStampStr}</span>
-        <span className={styles.board}>垣版 | 大砲</span>
       </div>
 
       <div className={styles.content}>

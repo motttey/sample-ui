@@ -44,17 +44,8 @@ const SnsPost = ({
       </div>
 
       <div className={styles.footer}>
-        <span>{timeStampStr}</span>
-        <span className={styles.views}>{impsStr}</span>
+        <span>{timeStampStr}</span> <span className={styles.views}>{impsStr}</span>
       </div>
-    
-    {/*
-      <div className={styles.actions}>
-        <button className={styles.iconButton}>🔁</button>
-        <button className={styles.iconButton}>❤️</button>
-        <button className={styles.iconButton}>🔖</button>
-      </div>
-    */}
     </div>
   );
 };

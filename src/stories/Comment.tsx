@@ -5,6 +5,10 @@ interface Props {
     userId: string,
     timeStampStr: string
     imageSrcUrl?: string
+    repryNum?: number
+    kyokan?: number
+    naruhodo?: number
+    uuum?: number
     commentStrList: Array<string>
 }
 
@@ -12,6 +16,10 @@ const Comment = ({
     userId,
     timeStampStr,
     commentStrList,
+    repryNum=0,
+    kyokan=8,
+    naruhodo=2,
+    uuum=10,
     imageSrcUrl = "https://motttey.github.io/doraemon-namecard.webp"
 }: Props) => {
   return (
@@ -40,11 +48,11 @@ const Comment = ({
       </div>
 
       <div className={styles.footer}>
-        <button className={styles.repliesButton}>返信 0件</button>
+        <button className={styles.repliesButton}>返信 {repryNum} 件</button>
         <div className={styles.reactions}>
-          <span className={styles.reaction}>共感した 8</span>
-          <span className={styles.reaction}>なるほど 2</span>
-          <span className={styles.reaction}>うーん 7</span>
+          <span className={styles.reaction}>共感した {kyokan}</span>
+          <span className={styles.reaction}>なるほど {naruhodo}</span>
+          <span className={styles.reaction}>うーん {uuum}</span>
         </div>
       </div>
     </div>
