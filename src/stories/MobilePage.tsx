@@ -28,7 +28,7 @@ const RestaurantList = (restaurants: Array<Restaurant>) => {
     return (
         <ul>
             {restaurants.map((restaurant, index) => (
-                <li key={index}>
+                <li key={index} className={styles.listItem}>
                     ☆{restaurant.name}☆ ({restaurant.location})
                 </li>
             ))}
@@ -59,33 +59,43 @@ const MobilePage = ({visited}: Props) => {
             <header>
                 <p className={styles.title}>††望月田吾作 あとがき††</p>
                 <img
-                    src="/public/okutuke.png"
+                    src="/okutuke.png"
                     alt="ヘッダーイメージ"
                     className={styles.headerImage}
                 />
+                <p className={styles.caption}>えっ 今日は全員カレーライス食っていいのか (ﾜﾗ</p>
             </header>
             
             <div className={styles.counterContainer}>
                 {VisitorCounter(visited)}
+                <p className={styles.caption}>
+                    キリ番踏んだ方はBBSで報告してください<br/>
+                    !!!!!踏み逃げ厳禁!!!!!
+                </p>
             </div>
 
             <main>
-            <p className={styles.message}>
-                ★★★ おすすめカレー'24 ★★★
-            </p>
-            {RestaurantList(restaurants)}
-            <p className={styles.updateInfo}>
-                更新日: 2024.12.30
-            </p>
+                <p className={styles.message}>
+                    ★無類のカレー好き★ <br/>
+                    望月田吾作の <br/>
+                    〜おすすめカレー'24〜
+                </p>
+                <p className={styles.updateInfo}>
+                    更新日: 2024.12.30
+                </p>
+                {RestaurantList(restaurants)}
             </main>
 
             <nav>
-                <a href="#">自己紹介</a> | <a href="#">イラスト</a> | <a href="#">掲示板</a> | <a href="#">絵茶</a>
+                <a href="#">自己紹介</a> | <a href="#">イラスト</a> | <a href="#">BBS</a> | <a href="#">絵茶</a>
             </nav>
 
             <footer>
-                <p><a>魔法のdランド</a></p>
-                <p>(C)望月田吾作 ※無断転載禁止</p>
+                <p className={styles.caption}><a>魔法のdランド</a></p>
+                <p className={styles.copyright}>
+                    (C)望月田吾作<br/>※無断転載禁止<br/>
+                    連絡はmotitago@gmail.comﾏﾃﾞ
+                </p>
             </footer>
         </div>
     );
