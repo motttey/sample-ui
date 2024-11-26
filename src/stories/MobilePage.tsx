@@ -12,13 +12,13 @@ interface Restaurant {
 }
 
 const restaurants = [
-    { name: "LAND", location: "目黒" },
+    { name: "LAND",     location: "目黒" },
     { name: "バルピパル", location: "西小山" },
     { name: "ナンディニ", location: "虎ノ門" },
-    { name: "ボンディ", location: "神保町" },
+    { name: "ボンディ",  location: "神保町" },
     { name: "ニルワナム", location: "神谷町" },
     { name: "スパイスカレー食堂", location: "五反田" },
-    { name: "AHIRIYA", location: "代々木" },
+    { name: "AHIRIYA",  location: "代々木" },
     { name: "東印度カレー商会", location: "不動前" },
     { name: "ボタニカリー", location: "大阪本町" },
     { name: "ナイアガラ", location: "祐天寺" }
@@ -58,6 +58,7 @@ const MobilePage = ({visited}: Props) => {
         <div className={styles.container}>
             <header>
                 <p className={styles.title}>††望月田吾作 あとがき††</p>
+                <p className={styles.caption}>今日の一枚</p>
                 <img
                     src="/okutuke.png"
                     alt="ヘッダーイメージ"
@@ -93,7 +94,8 @@ const MobilePage = ({visited}: Props) => {
             <footer>
                 <p className={styles.caption}><a>魔法のdランド</a></p>
                 <p className={styles.copyright}>
-                    (C)望月田吾作<br/>※無断転載禁止<br/>
+                    <br/>
+                    (C)望月田吾作<br/><br/>※無断転載禁止<br/>
                     連絡はmotitago@gmail.comﾏﾃﾞ
                 </p>
             </footer>
