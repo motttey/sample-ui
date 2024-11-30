@@ -23,9 +23,24 @@ const defaultArgs = {
   postImageUrl:  "https://motttey.github.io/dora2024.webp",
 }
 
+const sampleArgs = {
+  userName: 'nekory_men',
+  likeUser: 'saruta_kichiku',
+  likeUserNum: 2222,
+  postTimeStampStr: '2022年2月2日',
+  postImageUrl:  "/neko_rimen.png",
+  avatarImageUrl:  "/neko_rimen.png",
+}
+
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default = {
   args: {
     ...defaultArgs
+  },
+};
+
+export const SampleArgs = {
+  args: {
+    ...sampleArgs
   },
 };

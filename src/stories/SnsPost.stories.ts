@@ -86,6 +86,16 @@ const sampleArgs7 = {
   imageSrcUrl: "https://placehold.jp/999999/ffffff/150x150.png?text=%20",
 }
 
+const sampleArgs8 = {
+  username: 'ISHIKI TAKASHI',
+  userHandle: '@ishiki_highest',
+  timeStampStr: '午前0:00・ 2025年2月6日',
+  impsStr: '1972 件の表示',
+  postStrList: ['雨晴海岸で飲む、いつもの味。僕にとって新鮮みがないことが、成功の証だと思う。'],
+  imageSrcUrl: "https://placehold.jp/999999/ffffff/150x150.png?text=%20",
+}
+
+
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default = {
   args: {
@@ -132,5 +142,11 @@ export const SampleArgs6 = {
 export const SampleArgs7 = {
   args: {
     ...sampleArgs7
+  },
+};
+
+export const SampleArgs8 = {
+  args: {
+    ...sampleArgs8
   },
 };
