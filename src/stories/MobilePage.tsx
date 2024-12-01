@@ -85,6 +85,13 @@ const MobilePage = ({visited}: Props) => {
                     更新日: 2024.12.30
                 </p>
                 {RestaurantList(restaurants)}
+
+                <p className={styles.maruhiMessage}>
+                    ☆望月㊙︎情報☆
+                </p>
+                <p className={styles.updateInfo}>
+                    ボウリングが下手すぎて、隣レーンにボールを投げ込み場を凍りつかせたことがある
+                </p>
             </main>
 
             <nav>
