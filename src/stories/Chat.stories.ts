@@ -1,4 +1,3 @@
-import { fn } from '@storybook/test';
 import Chat from './Chat';
 import { Meta } from '@storybook/react';
 

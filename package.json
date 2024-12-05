@@ -13,7 +13,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "init-msw": "msw init public/",
-    "lint": "eslint './src/**/*.{jsx,tsx}' --fix",
+    "lint": "eslint './src/**/*.{jsx,tsx,ts}' --fix",
     "stylelint": "stylelint 'src/**/*.css' --fix"
   },
   "dependencies": {

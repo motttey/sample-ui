@@ -8,7 +8,7 @@ export default [
     ignores: ["node_modules"],
   },
   {
-    files: ["**/*.jsx", "**/*.tsx"],
+    files: ["**/*.jsx", "**/*.tsx", "**/*.ts"],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
@@ -25,6 +25,7 @@ export default [
     },
   },
   {
+    files: ["**/*.jsx", "**/*.tsx", "**/*.ts"],
     languageOptions: {
       parser: typescriptParser,
       ecmaVersion: 2022,
