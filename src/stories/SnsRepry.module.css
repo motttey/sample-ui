@@ -1,0 +1,109 @@
+/* Post.module.css (ダークモード＋縦線追加版) */
+
+/* Post.module.css (スレッド貫通線版) */
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .post {
+    display: flex;
+    padding: 16px;
+    /* border-bottom: 1px solid #333; */
+    position: relative;
+  }
+  
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #666;
+    margin-right: 12px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .profileImage {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+
+  /* アバターの真ん中を貫通する縦線を描画 */
+  .post::before {
+    content: "";
+    position: absolute;
+    left: 40px; /* アバターの中心あたり */
+    top: 20px;
+    bottom: -20px;
+    width: 1px;
+    background-color: #555;
+    z-index: 0;
+  }
+  
+  /* 最後の投稿だけ線を消す */
+  .post:last-child::before {
+    display: none;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  
+  .username {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .handle {
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+  
+  .timeAgo {
+    color: #777;
+    font-size: 0.8rem;
+  }
+  
+  .text {
+    margin-top: 4px;
+    white-space: pre-wrap; /* 改行対応 */
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  
+  .actionButton {
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .actionButton:hover {
+    color: #fff;
+  }
+  
