@@ -1,6 +1,6 @@
 import MobilePage from './MobilePage';
-import { Meta, StoryObj } from '@storybook/react';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 
 const meta: Meta<typeof MobilePage> = {
   title: 'Example/MobilePage',
