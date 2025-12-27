@@ -1,0 +1,240 @@
+.container {
+    background-color: #f0f2f5;
+    max-width: 1000px;
+    min-height: 100vh;
+    color: #333;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 4px solid #005bac;
+}
+
+.headerTop {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTop h1 {
+    margin: 0;
+    color: #005bac;
+    font-size: 24px;
+}
+
+.searchBar {
+    background: #eee;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.nav {
+    margin: 0 auto;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav li.active {
+    background-color: #005bac;
+    color: white;
+}
+
+.mainContent {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.topNews {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.mainArticle {
+    flex: 2;
+}
+
+.articleImage {
+    width: 100%;
+    height: 300px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #555;
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+}
+
+.sidebar {
+    flex: 1;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.sidebar ol {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.sidebar li span {
+    font-weight: bold;
+    color: #ff4500;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.adOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.adModal {
+    width: 90%;
+    max-width: 350px;
+    background-color: #fff;
+    position: relative;
+    border: 5px solid #ff0000;
+    padding: 0;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.closeButton {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 15px;
+    height: 15px;
+    background: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0.5;
+}
+
+.closeButton:hover {
+    opacity: 1;
+    background: #000;
+}
+
+.adLabel {
+    background: #666;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    width: fit-content;
+}
+
+.adContent {
+    padding: 15px;
+    text-align: center;
+}
+
+.adWarning {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.adTitle {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #0000ff;
+}
+
+.adImageWrapper {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    background: #e0e0e0;
+}
+
+.adImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.adDescription {
+    font-size: 13px;
+    color: #444;
+    margin: 15px 0;
+    text-align: left;
+    background: #ffffcc;
+    padding: 10px;
+}
+
+.adCta {
+    width: 100%;
+    background: linear-gradient(to bottom, #ff3300, #990000);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #660000;
+}
