@@ -34,12 +34,12 @@ const SnsPost = ({
 
       <div className={styles.content}>
         <p>
-            {postStrList.map((line, index) => (
-                <span key={index}>
-                    {line}
-                    <br />
-                </span>
-            ))}
+          {postStrList.map((line, index) => (
+            <span key={index}>
+              {line}
+              <br />
+            </span>
+          ))}
         </p>
       </div>
 
