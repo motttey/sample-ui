@@ -38,15 +38,13 @@ const SnsPhotoPost = ({
   timeStampStr,
   avatarSrcUrl = 'https://placehold.jp/3d4070/ffffff/150x150.png?text=%20',
   photoSrcUrl,
-  replyCount = 111,
-  repostCount = 3850,
-  likeCount = 19000,
-  bookmarkCount = 2923,
+  replyCount = 0,
+  repostCount = 0,
+  likeCount = 0,
 }: Props) => {
   const reply = formatCount(replyCount);
   const repost = formatCount(repostCount);
   const like = formatCount(likeCount);
-  const bookmark = formatCount(bookmarkCount);
 
   return (
     <div className={styles.postContainer}>
