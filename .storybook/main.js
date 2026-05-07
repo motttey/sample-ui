@@ -14,6 +14,11 @@ const config = {
 
   typescript: {
     reactDocgen: "react-docgen-typescript"
-  }
+  },
+
+  viteFinal: async (config) => ({
+    ...config,
+    base: process.env.STORYBOOK_BASE_PATH || config.base,
+  }),
 };
 export default config;
