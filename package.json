@@ -16,6 +16,9 @@
     "lint": "eslint './src/**/*.{jsx,tsx,ts}' --fix",
     "stylelint": "stylelint 'src/**/*.css' --fix"
   },
+  "engines": {
+    "yarn": "1.22.22"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
