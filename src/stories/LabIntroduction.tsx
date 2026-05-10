@@ -23,7 +23,7 @@ const LabIntroduction = ({
   researchThemes,
   message,
 }: Props) => {
-  const heroImageUrl = '/jannunokyokuti.png';
+  const heroImageUrl = '/lab_members.jpg';
   const professorAvatarUrl = professor.avatarSrcUrl ?? 'https://placehold.jp/1f3a5f/ffffff/160x160.png?text=Professor';
 
   return (
