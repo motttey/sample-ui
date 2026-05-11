@@ -28,8 +28,17 @@ jobs:
           node-version: 22
           cache: yarn
 
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Use Yarn 4.9.1
+        run: corepack prepare yarn@4.9.1 --activate
+
+      - name: Show Yarn version
+        run: yarn -v
+
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --flozen-lockfile
 
       - name: Build Storybook
         run: yarn build-storybook --output-dir storybook-static
@@ -50,6 +59,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
