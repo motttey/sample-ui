@@ -11,13 +11,10 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,16 +23,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: yarn
 
       - name: Enable Corepack
         run: corepack enable
 
-      - name: Use Yarn 4.9.1
+      - name: Activate Yarn
         run: corepack prepare yarn@4.9.1 --activate
 
-      - name: Show Yarn version
-        run: yarn -v
+      - name: Show versions
+        run: |
+          node -v
+          yarn -v
 
       - name: Install dependencies
         run: yarn install --flozen-lockfile
@@ -54,11 +52,16 @@ jobs:
           path: storybook-static
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
 
     steps:
       - name: Deploy to GitHub Pages
