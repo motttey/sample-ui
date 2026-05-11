@@ -36,7 +36,7 @@ jobs:
           yarn -v
 
       - name: Install dependencies
-        run: yarn install --flozen-lockfile
+        run: yarn install --immutable
 
       - name: Build Storybook
         run: yarn build-storybook --output-dir storybook-static
