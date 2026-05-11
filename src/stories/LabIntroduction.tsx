@@ -29,7 +29,7 @@ const LabIntroduction = ({
   return (
     <article className={styles.container}>
       <header className={styles.header}>
-        <p className={styles.eyebrow}>University Laboratory Profile</p>
+        <p className={styles.eyebrow}>Ikanaihouga Mashi University Laboratory Profile</p>
         <h1 className={styles.labName}>{labName}</h1>
         <div className={styles.titleRule} />
       </header>
@@ -71,7 +71,7 @@ const LabIntroduction = ({
       </section>
 
       <section className={styles.messageSection}>
-        <p className={styles.sectionLabel}>Message from the Laboratory</p>
+        <p className={styles.sectionLabel}>研究室からのメッセージ</p>
         <blockquote className={styles.message}>{message}</blockquote>
       </section>
     </article>
