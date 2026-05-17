@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 
 const meta: Meta<typeof MobilePage> = {
-  title: 'Example/MobilePage',
+  title: 'Pages/MobilePage',
   component: MobilePage,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout

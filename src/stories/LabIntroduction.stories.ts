@@ -2,7 +2,7 @@ import LabIntroduction from './LabIntroduction';
 import { Meta } from '@storybook/react-vite';
 
 const meta: Meta<typeof LabIntroduction> = {
-  title: 'Example/LabIntroduction',
+  title: 'Pages/LabIntroduction',
   component: LabIntroduction,
   parameters: {
     layout: 'centered',
