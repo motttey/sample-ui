@@ -1,4 +1,5 @@
 import illustration from './assets/atm_character.png'
+import fujikoBankMark from './assets/fujiko-bank-mark.svg'
 import styles from './AtmTransferComplete.module.css'
 
 function AtmTransferComplete() {
@@ -8,7 +9,7 @@ function AtmTransferComplete() {
         <div className={styles.screen}>
           <header className={styles.header}>
             <div className={styles.brand} aria-label="フジコ銀行">
-              <span className={styles.brandMark} aria-hidden="true">F</span>
+              <img className={styles.brandMark} src={fujikoBankMark} alt="" />
               <span>フジコ銀行</span>
             </div>
             <div className={styles.headerCenter}>お振込</div>

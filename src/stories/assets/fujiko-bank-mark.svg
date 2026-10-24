@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <linearGradient id="bank-blue" x1="8" y1="4" x2="53" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#238cb8"/>
+      <stop offset=".48" stop-color="#0a5d91"/>
+      <stop offset="1" stop-color="#073451"/>
+    </linearGradient>
+    <linearGradient id="bank-red" x1="36" y1="14" x2="51" y2="23" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff8764"/>
+      <stop offset="1" stop-color="#d83d35"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="10" fill="#092d4e"/>
+  <rect x="4" y="4" width="56" height="56" rx="8" fill="url(#bank-blue)" stroke="#b5d8e7" stroke-width="1.5"/>
+  <path d="M6 17c12-9 30-10 51-5V9a5 5 0 0 0-5-5H12a8 8 0 0 0-8 8v11Z" fill="#fff" opacity=".17"/>
+  <path d="M21 14h31l-3 8H27l-2 8h19l-3 8H23l-4 13H9l12-37Z" fill="#fff"/>
+  <path d="M38 14h14l-3 8H35l3-8Z" fill="url(#bank-red)"/>
+</svg>

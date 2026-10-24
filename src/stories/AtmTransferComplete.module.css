@@ -54,19 +54,12 @@
 }
 
 .brandMark {
-  display: grid;
+  display: block;
   width: 36px;
   height: 36px;
-  place-items: center;
-  border: 2px solid #eaf3f3;
-  border-radius: 50%;
-  background: #e5f4ed;
+  border-radius: 6px;
   box-shadow: 0 1px 2px #16415c;
-  color: #18704f;
-  font-family: Georgia, serif;
-  font-size: 21px;
-  font-weight: 700;
-  text-shadow: none;
+  object-fit: contain;
 }
 
 .headerCenter {
@@ -246,7 +239,6 @@
   .brandMark {
     width: 27px;
     height: 27px;
-    font-size: 16px;
   }
 
   .headerCenter {
